@@ -1,25 +1,17 @@
 package main
 
 import (
-	"demo"
 	"fmt"
-	"log"
-	"runtime"
+	"math/rand"
 	"time"
 )
 
-var where = func() {
-	_, file, line, _ := runtime.Caller(1)
-	fmt.Println()
-	log.Printf("%s:%d", file, line)
-}
-var start = time.Now()
-
 func main() {
-	demo.StrNewT()
-	where()
-	//longCalculation()
-	end := time.Now()
-	delta := end.Sub(start)
-	fmt.Println(delta)
+	a := rand.Int()
+	fmt.Println(a)
+	b := rand.Intn(8) //【0，n)
+	timens := int64(time.Now().Nanosecond())
+	//生成随机数种子
+	rand.Seed(timens)
+	c := 100 * rand.Float32()
 }

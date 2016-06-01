@@ -2,7 +2,11 @@ package demo
 
 import (
 	"fmt"
+<<<<<<< HEAD
 	//"strings"
+=======
+	"strings"
+>>>>>>> 037eb39d41c2b1f9e8fc69996100cb15b4a94354
 )
 
 type T struct {
