@@ -20,7 +20,6 @@ func MakeMap() {
 	fmt.Printf("Map assigned at \"two\" is: %d\n", mapLit["two"])
 	fmt.Printf("Map literal at \"ten\" is: %d\n", mapLit["ten"])
 }
-<<<<<<< HEAD
 
 func Mapfunc() {
 	mf := map[int]func() int{
@@ -76,5 +75,3 @@ func SortMap() {
 		fmt.Printf("Key: %v, Value: %v / ", k, v)
 	}
 }
-=======
->>>>>>> 037eb39d41c2b1f9e8fc69996100cb15b4a94354
