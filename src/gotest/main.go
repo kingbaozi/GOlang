@@ -16,8 +16,7 @@ var where = func() {
 var start = time.Now()
 
 func main() {
-	a, b := demo.SliceStingbak("sadfasdf", 3)
-	fmt.Printf("a: %s, b: %s", a, b)
+	demo.FieldsOut()
 	where()
 	//longCalculation()
 	end := time.Now()
