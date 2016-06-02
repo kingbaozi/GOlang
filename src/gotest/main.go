@@ -16,7 +16,7 @@ var where = func() {
 var start = time.Now()
 
 func main() {
-	demo.StrNewT()
+	demo.TagOut()
 	where()
 	//longCalculation()
 	end := time.Now()
