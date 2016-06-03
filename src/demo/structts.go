@@ -6,11 +6,6 @@ import (
 	"reflect"
 )
 
-type T struct {
-	id   int
-	name string
-}
-
 type TagType struct { // tags
 	field1 bool   "kill 4"
 	field2 string "The name of the stirng"
