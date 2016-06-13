@@ -16,8 +16,8 @@ var where = func() {
 var start = time.Now()
 
 func main() {
-	demo.StrNewTs()
-	where()
+	val := new(demo.Person)
+	fmt.Println(val.firstname)
 	//longCalculation()
 	end := time.Now()
 	delta := end.Sub(start)

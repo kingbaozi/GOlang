@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-type person struct {
+type Person struct {
 	firstname string
 	lastname  string
 }
@@ -22,9 +22,15 @@ type Node struct {
 	su   *Node
 }
 
-func upPerson(p *person) {
+func upPerson(p *Person) {
 	p.firstname = strings.ToUpper(p.firstname)
 	p.lastname = strings.ToUpper(p.lastname)
+}
+func (p *Person) FirstName() string {
+	return p.firstname
+}
+func (p *Person) SetFirstName(NewName string) {
+	p.firstname = NewName
 }
 func FieldsOut() {
 	var ba T
@@ -33,7 +39,7 @@ func FieldsOut() {
 	m.id = 1
 	m.name = "king"
 	ms := &T{1, "bab"}
-	var va person
+	var va Person
 	va.firstname = "sadf"
 	va.lastname = "sdf"
 	upPerson(&va)
