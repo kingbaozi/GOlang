@@ -5,6 +5,15 @@ import (
 	"time"
 )
 
+type Log struct {
+	Msg string
+}
+
+type Cus struct {
+	Name string
+	Logs *Log
+}
+
 func Greetings() {
 	var (
 		hh = time.Now().Hour()
@@ -24,4 +33,15 @@ func Greetings() {
 	fmt.Println(mmytime)
 	fmt.Println(hh, mm, ss)
 	fmt.Println(y, m, d)
+}
+
+func (log *Log) Add(s string) {
+	log.Msg += "\n" + s
+}
+
+func (log *Log) String() string {
+	return log.Msg
+}
+func (c *Cus) GetLog() *Log {
+	return c.Logs
 }
