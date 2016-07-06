@@ -16,8 +16,9 @@ var where = func() {
 var start = time.Now()
 
 func main() {
-	val := new(demo.Person)
-	fmt.Println(val.firstname)
+	val := &demo.Kc{demo.Point{3,4}, "pykk"}
+
+	fmt.Println(val.Abs());
 	//longCalculation()
 	end := time.Now()
 	delta := end.Sub(start)
