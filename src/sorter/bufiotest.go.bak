@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	skillfolder := `/Users/King/www/CSV/`
+	sqlitefile, err := os.Create(skillfolder + "sqlite.sql")
+	mysqlfile, err := os.Create(skillfolder + "mysql.sql")
+	if err != nil {
+		fmt.Println(err)
+	}
+	str := "DROP TABLE IF EXISTS `pre_static_building_text`;\n CREATE TABLE pre_static_building_text(\n `BuildingTextLibrary` varchar(255) NOTE NULL,\n `BuildingTextGroup` varchar(255) NOTE NULL,\n `Content` varchar(255) NOTE NULL DEFAULT '',\n PRIMARY KEY (`BuildingTextLibrary`,`BuildingTextGroup`)\n )ENGINE=InnoDB;\n"
+	for i := 0; i < 10; i++ {
+		sqlitefile.WriteString(str)
+		mysqlfile.WriteString(str)
+	}
+}
