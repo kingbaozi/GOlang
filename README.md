@@ -1,2 +1,0 @@
-# GOlang
-GOlang test
